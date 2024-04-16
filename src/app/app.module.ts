@@ -44,7 +44,7 @@ import {MatSlideToggle} from "@angular/material/slide-toggle";
     StudentsComponent,
     PaymentsComponent,
     LoadStudentsComponent,
-    LoadPaymentsComponent
+    LoadPaymentsComponent,
   ],
   imports: [
     BrowserModule,

@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit{
     let auth = this.authService.login(username, password);
     if(auth==true){
       console.log(auth);
-      this.router.navigateByUrl("/admin");
+      this.router.navigateByUrl("/admin/students");
     }
   }
 }
+

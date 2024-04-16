@@ -13,6 +13,7 @@
     <button mat-menu-item routerLink="/admin/loadStudents" >Load Students</button>
     <button mat-menu-item routerLink="/admin/loadPayments">Load Payments</button>
   </mat-menu>
+  <span class="spacer"></span>
   <button mat-button *ngIf="authService.authenticated==true">
     {{authService.username}}
   </button>
@@ -30,7 +31,7 @@
       <mat-list-item>
         <button mat-button routerLink="/admin/students">
           <mat-icon>people</mat-icon>
-          Students
+          Employees
         </button>
       </mat-list-item>
       <mat-list-item>

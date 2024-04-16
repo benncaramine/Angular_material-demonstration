@@ -1,0 +1,18 @@
+/* Styling the mat-form-field */
+.mat-form-field {
+  width: 100%; /* Adjust width as needed */
+}
+
+/* Styling the input inside mat-form-field */
+.mat-form-field input {
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Adjust border radius as needed */
+  border: 1px solid #ccc; /* Adjust border color and thickness as needed */
+  outline: none; /* Remove outline */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Styling the input on focus */
+.mat-form-field input:focus {
+  border-color: dodgerblue; /* Change border color on focus */
+}
