@@ -20,7 +20,6 @@ export  class  AuthGuard  {
         this.router.navigateByUrl("/login")
         return false;
       }
-
   }
 }
 

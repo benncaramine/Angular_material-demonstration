@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Router} from "@angular/router";
+import {findAllMatchingNodes} from "@angular/compiler-cli/src/ngtsc/typecheck/src/comments";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class AuthenticationService {
   constructor(private router : Router) { }
 
   public login(username : string, password : string){
-    if(this.users[username] && password=="admin"){
+    if(this.users[username] && password=="1234"){
       this.username = username;
       this.roles = this.users[username];
       this.authenticated = true;
