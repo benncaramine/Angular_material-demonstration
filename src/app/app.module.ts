@@ -32,6 +32,8 @@ import {AuthorizationGuard} from "./guards/authorization.guard";
 import {MatCheckbox} from "@angular/material/checkbox";
 import {MatSlider, MatSliderThumb} from "@angular/material/slider";
 import {MatSlideToggle} from "@angular/material/slide-toggle";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import {MatSlideToggle} from "@angular/material/slide-toggle";
     PaymentsComponent,
     LoadStudentsComponent,
     LoadPaymentsComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,8 +73,8 @@ import {MatSlideToggle} from "@angular/material/slide-toggle";
     FormsModule,
     MatSlider,
     MatSliderThumb,
-    MatSlideToggle
-
+    MatSlideToggle,
+    MatSnackBarModule
   ],
   providers: [
     AuthGuard, AuthorizationGuard

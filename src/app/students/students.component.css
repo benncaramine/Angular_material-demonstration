@@ -1,18 +1,21 @@
-/* Styling the mat-form-field */
+/* Styles for mat-form-field with appearance="fill" */
 .mat-form-field {
-  width: 100%; /* Adjust width as needed */
+  width: 100%;
+  margin-bottom: 20px; /* Adjust as needed */
 }
 
-/* Styling the input inside mat-form-field */
-.mat-form-field input {
-  padding: 10px; /* Adjust padding as needed */
-  border-radius: 5px; /* Adjust border radius as needed */
-  border: 1px solid #ccc; /* Adjust border color and thickness as needed */
-  outline: none; /* Remove outline */
-  transition: border-color 0.3s ease; /* Smooth transition for border color */
+/* Styles for input inside mat-form-field */
+.mat-input-element {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* Change to your desired background color */
+  transition: background-color 0.3s ease;
 }
 
-/* Styling the input on focus */
-.mat-form-field input:focus {
-  border-color: dodgerblue; /* Change border color on focus */
+.mat-input-element:focus {
+  outline: none;
+  background-color: #e0e0e0; /* Change to your desired focus background color */
 }

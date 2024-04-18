@@ -1,51 +1,72 @@
-.login-container {
+/* Styles généraux */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(135deg, #3498db, #8e44ad),
+    radial-gradient(circle at top left, #ffffff 5%, transparent 10%),
+    radial-gradient(circle at top right, #ffffff 5%, transparent 10%),
+    radial-gradient(circle at bottom left, #ffffff 5%, transparent 10%),
+    radial-gradient(circle at bottom right, #ffffff 5%, transparent 10%);
+  background-size: 100% 100%, 50px 50px, 50px 50px, 50px 50px, 50px 50px;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+}
+
+.logo {
+  width: 50px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+
+mat-card {
+
+}
+.button-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: flex-end;
 }
 
-.mat-card {
-  width: 400px;
-  padding: 20px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.button-container button {
+  margin-left: 5px;
+  border-radius: 6px;
 }
 
-.mat-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
+mat-divider {
+  margin: 20px 0;
 }
 
-.mat-card-header .mat-card-title {
-  font-size: 20px;
-}
-
-.mat-divider {
-  margin-bottom: 16px;
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .mat-form-field {
   width: 100%;
-}
-
-.mat-form-field input {
-  width: 80%;
-}
-
-.mat-card-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 16px;
-}
-
-.mat-card-actions button {
-  margin-left: 8px;
-}
-.logo {
-  width: 35px; /* Adjust size as needed */
-  height: 20px; /* Adjust size as needed */
-  margin-right: 8px; /* Adjust spacing as needed */
 }

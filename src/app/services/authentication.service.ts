@@ -15,8 +15,8 @@ export class AuthenticationService {
   }
   constructor(private router : Router) { }
 
-  public login(username : string, password : string){
-    if(this.users[username] && password=="1234"){
+  public login(username : string, password : string) {
+    if (this.users[username] && password == "1234") {
       this.username = username;
       this.roles = this.users[username];
       this.authenticated = true;
@@ -25,12 +25,13 @@ export class AuthenticationService {
       return false;
     }
   }
-
-  logout() {
-    this.authenticated=false;
+  logout(){
+    this.authenticated = false;
     this.username = undefined;
     this.roles = [];
     this.router.navigateByUrl("/login");
   }
 }
+
+
 

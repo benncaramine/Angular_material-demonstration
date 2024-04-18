@@ -1,29 +1,48 @@
-<div class="login-container" *ngIf="loginFormGroup">
-  <mat-card [formGroup]="loginFormGroup">
-    <mat-card-header>
-      <mat-card-title>
-        <img src="assets/logo.png" alt="Logo" class="logo">
-        Authentication
-      </mat-card-title>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      <mat-form-field appearance="outline">
-        <mat-label>Username</mat-label>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div class="background"></div>
+<div class="card">
+  <div class="login-container" *ngIf="loginFormGroup" (keydown.enter)="login()">
+    <mat-card [formGroup]="loginFormGroup">
+      <mat-card-header>
+        <mat-card-title>
+          <img src="assets/logo.png" alt="Logo" class="logo">
+          Authentication
 
-        <input matInput formControlName="username">
+        </mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
 
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Password *</mat-label>
-        <input type="password" matInput formControlName="password">
-      </mat-form-field>
-    </mat-card-content>
-    <mat-card-actions align="end">
-      <button
-        mat-raised-button color="primary"
-        (click)="login()"
-      >Login</button>
-    </mat-card-actions>
-  </mat-card>
+          <input matInput formControlName="username" >
+
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password *</mat-label>
+          <input type="password" matInput formControlName="password" >
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions align="end" class="button-container" >
+        <ng-container *ngIf="errorMessage">
+          <div class="error-message">{{ errorMessage }}</div>
+        </ng-container>
+        <button
+          mat-raised-button color="primary"
+          (click)="login()"
+        >Login</button>
+        <button mat-raised-button color="primary" (click)="register()">Register</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
+</body>
+</html>
