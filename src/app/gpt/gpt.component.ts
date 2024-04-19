@@ -59,7 +59,8 @@ export class GptComponent implements OnInit {
         }
       })
   }
-
+/* Pour integrer GPT, il suffit de créer une fonction par exemple hamdleAskGPT()
+en fonction de la demande POST predefinie par OpenAI avec les champs demandes */
 }
 
 
