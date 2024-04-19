@@ -42,7 +42,7 @@ export class GptComponent implements OnInit{
   handleAskGPT() {
       let url = "https://api.openai.com/v1/chat/completions";
        let httpHeaders = new HttpHeaders()
-         .set("Authorization", "Bearer sk-proj-iTVOY5e94GHr8asRh9MTT3BlbkFJ7i4G9xA5G32NI1R6a5Pc")
+         .set("Authorization", "Bearer api-key.txt")
          let payload = {
            model : "gpt-3.5-turbo",
            messages : this.messages

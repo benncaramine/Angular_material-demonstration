@@ -1,21 +1,23 @@
 import { Injectable } from '@angular/core';
 import {Router} from "@angular/router";
-import {findAllMatchingNodes} from "@angular/compiler-cli/src/ngtsc/typecheck/src/comments";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-  public username : any;
-  public roles : string[] = [];
-  public authenticated : boolean =false;
-  public users:any = {
-    admin : ['STUDENT','ADMIN'],
-    user1 : ['STUDENT']
+  public username: any;
+  public roles: string[] = [];
+  public authenticated: boolean = false;
+  public users: any = {
+    admin: ['STUDENT', 'ADMIN'],
+    user1: ['STUDENT']
   }
-  constructor(private router : Router) { }
 
-  public login(username : string, password : string) {
+  constructor(private router: Router) {
+  }
+
+  public login(username: string, password: string) {
     if (this.users[username] && password == "admin@123") {
       this.username = username;
       this.roles = this.users[username];
@@ -32,6 +34,3 @@ export class AuthenticationService {
     this.router.navigateByUrl("/login");
   }
 }
-
-
-
