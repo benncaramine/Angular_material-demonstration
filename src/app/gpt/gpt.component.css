@@ -1,25 +1,17 @@
 /* Center content vertically and horizontally */
 
 
-.p-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 /* Style the card */
 mat-card {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 800px;
+  width: 600px;
   padding: 10px;
-  margin: 10px;
-  margin-right: 10px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 250px;
 }
 
 /* Style the form */
