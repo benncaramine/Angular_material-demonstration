@@ -33,7 +33,8 @@ import {MatCheckbox} from "@angular/material/checkbox";
 import {MatSlider, MatSliderThumb} from "@angular/material/slider";
 import {MatSlideToggle} from "@angular/material/slide-toggle";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
-import { TestComponent } from './test/test.component';
+import { GptComponent } from './gpt/gpt.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,6 @@ import { TestComponent } from './test/test.component';
     PaymentsComponent,
     LoadStudentsComponent,
     LoadPaymentsComponent,
-    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +74,9 @@ import { TestComponent } from './test/test.component';
     MatSlider,
     MatSliderThumb,
     MatSlideToggle,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
+
   ],
   providers: [
     AuthGuard, AuthorizationGuard

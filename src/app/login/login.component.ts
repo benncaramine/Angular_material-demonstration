@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {AuthenticationService} from "../services/authentication.service";
 import {Route, Router} from "@angular/router";
@@ -13,7 +13,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 export class LoginComponent implements OnInit{
 
   public loginFormGroup! : FormGroup;
-
+  hide = true;
   constructor(private fb : FormBuilder,
               private authService : AuthenticationService,
               private router : Router,
@@ -50,6 +50,10 @@ export class LoginComponent implements OnInit{
       horizontalPosition: "center",
       verticalPosition: "bottom"
     });
+  }
+
+  togglePasswordVisibility() {
+    this.hide = !this.hide;
   }
 }
 
