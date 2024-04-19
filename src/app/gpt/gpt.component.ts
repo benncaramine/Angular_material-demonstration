@@ -60,22 +60,6 @@ export class GptComponent implements OnInit {
       })
   }
 
-  HandleAskGPT4() {
-    let url = "https://api.openai.com/v1/chat/completions";
-    let httpHeaders = new HttpHeaders()
-      .set("Authorization", "Bearer API_KEY.txt")
-    let payload= {
-      model: "gpt-3.5-turbo-1106",
-      messages: this.messages
-    }
-    this.httpClient.post(url,payload, {headers: httpHeaders})
-      .subscribe({
-        next : (resp) => {
-          this.result=resp;
-        },
-        error : (err) =>{}
-      })
-  }
 }
 
 
