@@ -13,7 +13,6 @@ export class AuthenticationService {
     admin: ['STUDENT', 'ADMIN'],
     user1: ['STUDENT']
   }
-
   constructor(private router: Router) {
   }
   public login(username: string, password: string) {
@@ -26,11 +25,11 @@ export class AuthenticationService {
       return false;
     }
   }
-
-logout(){
+  //test
+  logout(){
     this.authenticated = false;
     this.username = undefined;
     this.roles = [];
-    this.router.navigateByUrl("/login").then(() => true);
-}
+    this.router.navigateByUrl("/login").then();
+  }
 }

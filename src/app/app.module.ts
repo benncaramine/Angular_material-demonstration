@@ -35,6 +35,7 @@ import {MatSlideToggle} from "@angular/material/slide-toggle";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { GptComponent } from './gpt/gpt.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {MatStep, MatStepper} from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
@@ -43,7 +44,6 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     HomeComponent,
     ProfileComponent,
     LoginComponent,
-    DashboardComponent,
     StudentsComponent,
     PaymentsComponent,
     LoadStudentsComponent,
@@ -75,7 +75,9 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     MatSliderThumb,
     MatSlideToggle,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatStepper,
+    MatStep
 
   ],
   providers: [
