@@ -25,7 +25,7 @@ export class AuthenticationService {
       return false;
     }
   }
-  //test
+
   logout(){
     this.authenticated = false;
     this.username = undefined;
