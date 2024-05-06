@@ -36,6 +36,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { GptComponent } from './gpt/gpt.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {MatStep, MatStepper} from "@angular/material/stepper";
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {MatStep, MatStepper} from "@angular/material/stepper";
     PaymentsComponent,
     LoadStudentsComponent,
     LoadPaymentsComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

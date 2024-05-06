@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit{
     let password = this.loginFormGroup.value.password;
     let auth = this.authService.login(username, password);
     if(auth==true){
-      console.log(auth);
+      console.log();
       this.router.navigateByUrl("/admin/students");
     }
     else { // to use snackBar, u must use a constructor !
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit{
   }
 
   register() {
-    this.snackBar.open('Please contact your administrator to register', 'Dismiss',  {
+    this.snackBar.open('Access Pending Administrator Approval !', 'Dismiss',  {
       duration: 5000, // Duration in milliseconds
       horizontalPosition: "center",
       verticalPosition: "bottom"

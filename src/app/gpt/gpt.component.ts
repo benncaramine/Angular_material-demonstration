@@ -45,7 +45,7 @@ export class GptComponent implements OnInit {
   handleAskGPT() {
     let url = "https://api.openai.com/v1/chat/completions";
     let httpHeaders = new HttpHeaders()
-      .set("Authorization", "Bearer sk-proj-g8KdlAtxBIBjfeERJsQjT3BlbkFJC7qOytXU6W6Q5QQJcBL6")
+      .set("Authorization", "Bearer sk-proj-BMcKrgCim43fmPhgta5OT3BlbkFJBNyg0VSPlQEOzCdqwbK1")
     let payload = {
       model: "gpt-3.5-turbo",
       messages: this.messages
@@ -59,8 +59,7 @@ export class GptComponent implements OnInit {
         }
       })
   }
-/* Pour integrer GPT, il suffit de créer une fonction par exemple hamdleAskGPT()
-en fonction de la demande POST predefinie par OpenAI avec les champs demandes */
+
 }
 
 
