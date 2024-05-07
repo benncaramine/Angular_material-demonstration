@@ -12,11 +12,13 @@ import {AdminTemplateComponent} from "./admin-template/admin-template.component"
 import {AuthGuard} from "./guards/auth.guard";
 import {AuthorizationGuard} from "./guards/authorization.guard";
 import {GptComponent} from "./gpt/gpt.component";
+import {RegisterComponent} from "./register/register.component";
 
 
 const routes: Routes = [
   {path : "", component : LoginComponent},
   {path : "login", component : LoginComponent},
+  {path : "register", component : RegisterComponent},
   {path : "admin", component : AdminTemplateComponent, canActivate : [AuthGuard],
 
     children : [
